@@ -1,0 +1,65 @@
+{
+  "name": "contentful-starter-gatsby-blog",
+  "description": "Contentful Gatsby Starter Blog",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Contentful <opensource@contentful.com>",
+  "bugs": {
+    "url": "https://github.com/contentful/starter-gatsby-blog/issues"
+  },
+  "dependencies": {
+    "@contentful/rich-text-plain-text-renderer": "^15.12.1",
+    "@types/node": "^18.11.13",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@types/react-helmet": "^6.1.6",
+    "@types/styled-components": "^5.1.26",
+    "babel-plugin-styled-components": "^2.0.7",
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
+    "gatsby": "^4.23.1",
+    "gatsby-plugin-image": "^2.23.1",
+    "gatsby-plugin-react-helmet": "^5.0.0",
+    "gatsby-plugin-sharp": "^4.23.1",
+    "gatsby-plugin-styled-components": "^6.2.0",
+    "gatsby-plugin-typescript": "^5.2.0",
+    "gatsby-source-contentful": "^7.21.1",
+    "gatsby-transformer-sharp": "^4.23.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-helmet": "^6.1.0",
+    "react-is": "^18.2.0",
+    "reading-time": "^2.0.0-1",
+    "styled-components": "^5.3.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "gatsby-provision-contentful": "0.0.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "homepage": "https://github.com/contentful/starter-gatsby-blog#readme",
+  "keywords": [
+    "gatsby",
+    "contentful",
+    "starter"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contentful/starter-gatsby-blog.git"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "dev-gatsby": "gatsby develop",
+    "dev": "npm run clean && concurrently \"npm:dev-gatsby\" \"npm:dev-typescript\"",
+    "dev-typescript": "tsc -w",
+    "rebuild": "rm -rf .cache public && npm run dev",
+    "serve": "gatsby serve",
+    "troubleshoot": "rm -rf .cache node_modules public package-lock.json && npm i && npm run dev"
+  }
+}
